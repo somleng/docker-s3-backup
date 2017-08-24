@@ -21,3 +21,5 @@ if [ "$1" = 'sync' ]; then
     wait $!
   done
 fi
+
+exec "$@"
