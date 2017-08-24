@@ -16,7 +16,7 @@ if [ "$1" = 'sync' ]; then
 
   while [ 1 ]
   do
-    aws s3 sync $S3_PATH $LOCAL_DIR
+    aws s3 sync $LOCAL_DIR $S3_PATH --sse
     sleep $SLEEP_BETWEEN_SYNCS &
     wait $!
   done
